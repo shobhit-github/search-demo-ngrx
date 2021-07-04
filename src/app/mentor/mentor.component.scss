@@ -1,0 +1,65 @@
+
+.search-res-section {
+    background: #FFFFFF;
+    /* Border Color */
+
+    border: 1px solid #F1F4FE;
+    box-sizing: border-box;
+    border-radius: 10px;
+
+    padding: 2rem;
+
+
+    .card.mentor-card {
+
+        margin: 15px 0;
+        border: 1px solid #F1F4FE;
+        box-sizing: border-box;
+        border-radius: 10px;
+
+        img.card-img-top {
+            border-radius: 50px;
+        }
+
+        .card-body {
+            background: white;
+            hr {
+                margin-top: .5rem;
+                margin-bottom: 0;
+            }
+            .card-header {
+                background: white;
+                padding: 6px 0;
+                .card-title {
+                    margin-left: 1rem;
+                    margin-top: -1rem;
+                    width: 20%;
+                    color: #0F0928;
+                }
+                span.rating {
+                    margin-top: -2rem;
+                }
+                .card-subtitle {
+                    margin-left: -16.9rem;
+                    color: #0F0928 !important;
+                    width: 60%;
+                    margin-top: 2rem;
+                }
+                span.price {
+                    font-size: 20px;
+                }
+
+            }
+            p.card-text {
+                line-height: 25px;
+                font-family: unset;
+            }
+            .badge {
+                padding: 12px 22px;
+                font-size: medium;
+                font-weight: normal;
+                margin: 0 10px;
+            }
+        }
+    }
+}

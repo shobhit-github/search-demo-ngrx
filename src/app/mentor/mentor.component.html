@@ -1,0 +1,51 @@
+<div class="container">
+    <br>
+    <p class="text-center"> Sample Task </p>
+    <hr>
+
+    <div class="row">
+
+        <div class="col-md-3">
+            <app-search></app-search>
+        </div>
+        <div class="col-md-9 search-res-section">
+
+
+            <h3 class="count-items">{{totalMentor$ | async}} Mentors Available</h3>
+
+            <app-search-bar (searchTerm)="searchKeywords = $event"></app-search-bar>
+
+
+            <div class="mentor-list-section">
+                <div *ngFor="let mentor of (mentorList$ | async) | filterBy: searchKeywords" class="card mentor-card" [style.width.%]="100">
+                    <div class="card-body">
+                        <div class="card-header">
+                            <img style="width: 85px" class="card-img-top" src="https://icons-for-free.com/iconfiles/png/512/business+costume+male+man+office+user+icon-1320196264882354682.png" alt="Card image cap">
+<!--                            <img style="width: 85px" class="card-img-top" [src]="mentor.profilePic" alt="Card image cap">-->
+                            <h5 class="card-title">{{mentor.mentorName}} </h5>
+                            <span class="rating">
+                                <ngx-stars [readonly]="true" [size]="1" [initialStars]="mentor.ratingStar" [maxStars]="5" [color]="'#FFB52D'"  ></ngx-stars>
+                            </span>
+                            <h6 class="card-subtitle mb-2 text-muted">{{mentor.title}} | {{mentor.location}}</h6>
+                            <span class="price">{{mentor.chargeAmount | currency: 'USD'}}/hr</span>
+                            <span class="btn">
+                                <button type="button" class="btn btn-primary">BOOK SESSION</button>
+                            </span>
+                        </div>
+                        <hr />
+                        <p class="card-text" [innerText]="mentor.description"></p>
+
+                        <span *ngFor="let skill of mentor.skills" [innerText]="skill" class="badge badge-pill badge-light"></span>
+
+                    </div>
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+    </div> <!-- row.// -->
+
+</div>

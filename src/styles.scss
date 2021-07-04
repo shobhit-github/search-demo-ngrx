@@ -1,0 +1,20 @@
+/* You can add global styles to this file, and also import other style files */
+
+@font-face {
+    font-family: lato;
+    src: url(assets/fonts/Avenir-Font/avenir_ff/AvenirLTStd-Black.otf) format("opentype");
+}
+
+body {
+  background: #F6F8FA;
+}
+
+@media (min-width: 1200px) {
+    div.container {
+        max-width: 1350px;
+    }
+}
+
+div.container {
+    width: 1350px !important;
+}

@@ -1,0 +1,45 @@
+
+
+p.filter-by-text {
+    font-size: 1.3rem;
+}
+
+.card {
+    border: none;
+
+    .card-header {
+        border-bottom: none;
+
+        font-family: inherit;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 40px;
+        line-height: 19px;
+        display: flex;
+        align-items: center;
+        letter-spacing: 0.001em;
+        color: #0F0928;
+    }
+
+    .card-body {
+        font-family: inherit;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 40px;
+        letter-spacing: 0.001em;
+        color: #0F0928;
+        padding: 0.5rem 1.25rem;
+        background: #F6F8FA;
+
+        .form-check {
+            position: relative;
+            display: block;
+            padding: 0.4rem 1.25rem;
+            line-height: 25px;
+            span {
+                font-size: 15px;
+            }
+        }
+    }
+}

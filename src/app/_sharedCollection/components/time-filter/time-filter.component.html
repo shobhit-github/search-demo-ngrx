@@ -1,0 +1,13 @@
+<article class="card-group-item">
+    <header class="card-header">
+        <h6 class="title">Time Available </h6>
+    </header>
+    <div class="filter-content">
+        <div class="card-body">
+            <label *ngFor="let time of timeAvailableList" class="form-check">
+                <input (change)="onCheckBoxSelect($event.target)" class="form-check-input" type="checkbox" [value]="time">
+                <span class="form-check-label" [innerText]="time"> </span>
+            </label>
+        </div> <!-- card-body.// -->
+    </div>
+</article>

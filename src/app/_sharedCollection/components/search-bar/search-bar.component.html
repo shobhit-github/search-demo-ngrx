@@ -1,0 +1,30 @@
+
+
+
+
+<div class="input-group searchbar-section">
+    <input (keyup.enter)="onSearch($event.target)" placeholder="Search" type="text" class="form-control" aria-label="Text input with dropdown button">
+
+    <div class="input-group-append">
+        <button (click)="toggledD = !toggledD" class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >{{filterBy.name}}</button>
+        <div [style.display]="toggledD ? 'block' : 'none' " class="dropdown-menu">
+
+            <label (click)="filterBy = filterVa; toggledD = !toggledD" *ngFor="let filterVa of filterByItems" style="padding: 8px 40px" class="form-check filterlable">
+                <span class="form-check-label" [innerText]="filterVa.name"> </span>
+            </label>
+
+        </div>
+    </div>
+
+    <div class="input-group-append">
+        <button (click)="toggledDropdown = !toggledDropdown" class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Skills</button>
+        <div [style.display]="toggledDropdown ? 'block' : 'none' " class="dropdown-menu">
+
+            <label *ngFor="let skill of skillsList" style="padding: 8px 40px" class="form-check">
+                <input (change)="onCheckBoxSelect($event.target)" class="form-check-input" type="checkbox" [value]="skill" >
+                <span class="form-check-label" [innerText]="skill"> </span>
+            </label>
+
+        </div>
+    </div>
+</div>

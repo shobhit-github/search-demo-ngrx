@@ -1,0 +1,42 @@
+.searchbar-section {
+    margin-top: 22px;
+    background: #F6F8FA;
+    border-radius: 10px;
+    height: 56px;
+
+    input {
+        background: transparent;
+        border: none;
+        padding: 10px 20px;
+
+        &:focus {
+            outline: none;
+        }
+    }
+    .input-group-append {
+
+        margin-right: 25px;
+
+        .filterlable {
+            &:hover {
+                background: #0F0928;
+                color: white;
+            }
+        }
+
+        button[data-toggle] {
+            border: none;
+            &:hover {
+                background: none;
+                color: inherit;
+                box-shadow: none;
+            }
+        }
+
+        .dropdown-menu {
+            right: 0;
+            left: inherit;
+        }
+    }
+
+}
